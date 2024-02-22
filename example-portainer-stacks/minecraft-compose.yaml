@@ -1,0 +1,28 @@
+# https://github.com/itzg/docker-minecraft-server
+version: "3.8"
+services:
+  mc-forge:
+    image: itzg/minecraft-server:latest
+    container_name: mc-forge
+    ports:
+    # expose the Minecraft server port outside of container
+    - "25565:25565"
+    environment:
+      # REQUIRED for all types
+      EULA: "TRUE"
+      # Set server type (vs the default of vanilla)
+      TYPE: FORGE
+      VERSION: 1.19.2
+      FORGE_VERSION: 43.3.5
+      DEBUG: "true"
+      MOTD: MOTDkarn
+      OVERRIDE_SERVER_PROPERTIES: TRUE
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    volumes:
+    # use a named, managed volume for data volume
+    - ./mc_forge:/data
+    # attach local host directory "mods" in same directory as this compose file
+    # all mods in this directory get copied into /data/mods at startup
+    - ./mods:/mods:ro

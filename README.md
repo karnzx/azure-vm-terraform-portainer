@@ -1,7 +1,7 @@
 # Azure-VM-Terraform-Portainer
 
 Terraform create Azure VM (UbuntuServer) with portainer ready. it also generate SSH key pair for SSH connection to VM.
-
+with docker-compose's example (portainer stack) of palworld, minecraft game.
 **NOTES**: Security group is allow all Port, please change after test.
 
 Variables (can be edit in `variables.tf`)
@@ -56,6 +56,10 @@ Access Portainer at `https://<Public_IP>:9443`, Port 9443
 ```shell
 echo "https://$(terraform output -raw public_ip_address):9443"
 ```
+
+there example to deploy game server "Palworld" and "Minecraft" in `example-portainer-stacks`. copy and Add `stack` into portainer.
+
+[Palworld dedicated server ด้วย Docker เล่นกับเดอะแก๊งสูงสุด 32 คน](https://piravit-chenpittaya.medium.com/palworld-dedicated-server-%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-docker-%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B9%80%E0%B8%94%E0%B8%AD%E0%B8%B0%E0%B9%81%E0%B8%81%E0%B9%8A%E0%B8%87%E0%B8%AA%E0%B8%B9%E0%B8%87%E0%B8%AA%E0%B8%B8%E0%B8%94-32-%E0%B8%84%E0%B8%99-961bc3d22909)
 
 ## Clean Up
 
