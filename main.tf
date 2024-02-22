@@ -107,6 +107,7 @@ resource "azurerm_linux_virtual_machine" "this" {
   resource_group_name   = azurerm_resource_group.this.name
   network_interface_ids = [azurerm_network_interface.this.id]
   size                  = "Standard_B2ms"
+  custom_data           = base64encode(templatefile("init.tftpl", { username = "${var.username}" }))
 
   os_disk {
     caching              = "ReadWrite"
