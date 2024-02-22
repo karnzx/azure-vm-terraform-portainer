@@ -51,6 +51,12 @@ terraform output -raw public_ip_address` or run below command
 ssh adminuser@$(terraform output -raw public_ip_address) -i azure.key
 ```
 
+Access Portainer at `https://<Public_IP>:9443`, Port 9443
+
+```shell
+echo "https://$(terraform output -raw public_ip_address):9443"
+```
+
 ## Clean Up
 
 ```shell
