@@ -114,9 +114,9 @@ resource "azurerm_linux_virtual_machine" "this" {
   }
 
   source_image_reference {
-    publisher = "Debian"
-    offer     = "debian-11"
-    sku       = "11-backports-gen2"
+    publisher = "Canonical"
+    offer     = "UbuntuServer"
+    sku       = "18.04-LTS"
     version   = "latest"
   }
 
