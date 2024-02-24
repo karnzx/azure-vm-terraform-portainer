@@ -70,6 +70,4 @@ terraform apply plan
 
 ## Demonstration
 
-https://github.com/karnzx/azure-vm-terraform-portainer/assets/26167071/2dc7b3a8-dd0d-4576-9f1c-f582dbc087d4
-
-
+<https://github.com/karnzx/azure-vm-terraform-portainer/assets/26167071/2dc7b3a8-dd0d-4576-9f1c-f582dbc087d4>
